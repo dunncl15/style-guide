@@ -1,0 +1,186 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,600|Roboto+Condensed:300");
+/****** Variables******
+***********************/
+* {
+  box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background-color: #fff;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px; }
+
+/******** Header ********
+*************************/
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  background-color: #2F2235; }
+  header hr {
+    width: 25%;
+    margin: 0 auto;
+    opacity: .3; }
+
+.title-primary,
+.title-secondary {
+  font-weight: 300;
+  text-transform: uppercase;
+  margin: 8px 0; }
+
+.title-primary {
+  color: #fff; }
+
+.title-secondary {
+  color: #34D1D1; }
+
+.student-name {
+  color: #fff;
+  font-size: .9em;
+  font-weight: 600;
+  margin: 10px 0; }
+
+/**** Feature Modules ****
+*************************/
+.wrapper {
+  width: 90%;
+  min-height: 100vh;
+  margin: 35px auto; }
+
+.module-title {
+  display: flex;
+  flex-direction: column;
+  color: #666;
+  font-size: .95em;
+  font-weight: 300;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 10px 0 55px 0; }
+
+hr {
+  margin: 10px auto 0 auto;
+  width: 25%;
+  border-bottom: none;
+  color: #f2f2f2;
+  opacity: .75; }
+
+/**** Accordion Tabs ****
+*************************/
+.accordion-tabs {
+  border: 1px solid #D1D2D3; }
+
+.tab {
+  border-top: 2px solid #fff; }
+
+.accordion-tabs .tab:first-child {
+  border-top: 2px none; }
+
+.tab-title {
+  display: flex;
+  justify-content: space-between;
+  background-color: #f2f2f2;
+  color: #666;
+  cursor: pointer;
+  font-weight: 300;
+  padding: 10px;
+  margin: 0; }
+  .tab-title::after {
+    content: '+'; }
+
+.selected {
+  background-color: #fff;
+  font-weight: 600;
+  border-top: none; }
+  .selected::after {
+    content: '-'; }
+
+.inner-content {
+  display: none; }
+
+.inner-content > * {
+  padding: 10px; }
+
+.expanded {
+  display: block; }
+
+.text h3 {
+  padding: 0 0 10px 0;
+  border-bottom: 1px solid #D1D2D3; }
+
+.img-placeholder {
+  display: block;
+  height: 150px;
+  width: 100%;
+  padding: 0;
+  border: 1px solid #D1D2D3; }
+
+.code-btn {
+  display: block;
+  width: 100%;
+  margin: 30px 0 0 0;
+  padding: 15px 0;
+  background-color: #3F3244;
+  border-style: none;
+  font-size: 1.2em;
+  font-weight: 300;
+  text-transform: uppercase; }
+  .code-btn a {
+    display: block;
+    width: 100%;
+    color: #fff;
+    text-decoration: none; }
+
+@media screen and (min-width: 550px) {
+  .module-title {
+    flex-direction: row;
+    align-items: center; }
+    .module-title hr {
+      margin: 0 0 0 auto;
+      width: 70%; }
+  header {
+    flex-direction: row;
+    padding: 0 5%; }
+    header hr {
+      display: none; }
+  .accordion-tabs {
+    display: flex;
+    position: relative;
+    width: 95%;
+    margin: 0 auto;
+    min-height: 500px;
+    border: none; }
+  .tab {
+    width: 25%;
+    border: none;
+    max-height: 450px; }
+  .tab-title {
+    border: 1px solid #fff;
+    border-bottom: 1px solid #D1D2D3;
+    font-size: 1.1em;
+    justify-content: center; }
+    .tab-title::after {
+      content: ''; }
+  .tab-title.selected {
+    border: 1px solid #D1D2D3;
+    border-bottom: none; }
+  .inner-content {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    border: 1px solid #D1D2D3;
+    border-top: none; }
+  .img-placeholder {
+    width: 35%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto 2.5%;
+    height: 80%; }
+  .text {
+    width: 60%;
+    margin: 0 0 0 auto; }
+  .code-btn {
+    width: 40%;
+    margin: 0 auto; } }
