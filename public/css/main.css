@@ -47,7 +47,13 @@ header {
 .wrapper {
   width: 90%;
   min-height: 100vh;
-  margin: 35px auto; }
+  margin: 0 auto; }
+
+.module {
+  position: relative;
+  margin: 80px 0 0 0;
+  padding: 0 0 50px 0;
+  min-height: 600px; }
 
 .module-title {
   display: flex;
@@ -109,7 +115,8 @@ hr {
   padding: 0 0 10px 0;
   border-bottom: 1px solid #D1D2D3; }
 
-.img-placeholder {
+.img-placeholder,
+.img-placeholder-card {
   display: block;
   height: 150px;
   width: 100%;
@@ -132,7 +139,22 @@ hr {
     color: #fff;
     text-decoration: none; }
 
-@media screen and (min-width: 550px) {
+/**** Flexible Cards ****
+*************************/
+.flex-cards {
+  display: flex;
+  flex-direction: column; }
+
+.card {
+  margin: 0 0 15px 0;
+  border: 1px solid #D1D2D3; }
+  .card h3 {
+    padding: 0 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; }
+
+@media screen and (min-width: 600px) {
   .module-title {
     flex-direction: row;
     align-items: center; }
@@ -149,7 +171,6 @@ hr {
     position: relative;
     width: 95%;
     margin: 0 auto;
-    min-height: 500px;
     border: none; }
   .tab {
     width: 25%;
@@ -169,6 +190,8 @@ hr {
     position: absolute;
     width: 100%;
     left: 0;
+    padding: 0 0 30px 0;
+    overflow: auto;
     border: 1px solid #D1D2D3;
     border-top: none; }
   .img-placeholder {
@@ -180,7 +203,28 @@ hr {
     height: 80%; }
   .text {
     width: 60%;
+    height: 450px;
+    overflow: auto;
     margin: 0 0 0 auto; }
   .code-btn {
-    width: 40%;
-    margin: 0 auto; } }
+    position: absolute;
+    bottom: 25px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 40%; }
+  /**** Flexible Cards ****
+  *************************/
+  .flex-cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between; }
+  .card {
+    max-width: 33%; }
+    .card h3 {
+      padding: 0 10px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis; }
+  .card-grow {
+    min-width: 66%; } }

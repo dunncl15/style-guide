@@ -68,7 +68,14 @@ header {
 .wrapper {
   width: 90%;
   min-height: 100vh;
-  margin: 35px auto;
+  margin: 0 auto;
+}
+
+.module {
+  position: relative;
+  margin: 80px 0 0 0;
+  padding: 0 0 50px 0;
+  min-height: 600px;
 }
 
 .module-title {
@@ -145,7 +152,8 @@ hr {
   border-bottom: 1px solid $medium-grey;
 }
 
-.img-placeholder {
+.img-placeholder,
+.img-placeholder-card {
   display: block;
   height: 150px;
   width: 100%;
@@ -171,7 +179,27 @@ hr {
   }
 }
 
-@media screen and (min-width: 550px) {
+/**** Flexible Cards ****
+*************************/
+
+.flex-cards {
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  margin: 0 0 15px 0;
+  border: 1px solid $medium-grey;
+  h3 {
+    padding: 0 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+
+@media screen and (min-width: 600px) {
 
   .module-title {
     flex-direction: row;
@@ -195,7 +223,6 @@ hr {
     position: relative;
     width: 95%;
     margin: 0 auto;
-    min-height: 500px;
     border: none;
   }
 
@@ -224,6 +251,8 @@ hr {
     position: absolute;
     width: 100%;
     left: 0;
+    padding: 0 0 30px 0;
+    overflow: auto;
     border: 1px solid $medium-grey;
     border-top: none;
   }
@@ -239,12 +268,41 @@ hr {
 
   .text {
     width: 60%;
+    height: 450px;
+    overflow: auto;
     margin: 0 0 0 auto;
   }
 
   .code-btn {
+    position: absolute;
+    bottom: 25px;
+    left: 0;
+    right: 0;
+    margin: auto;
     width: 40%;
-    margin: 0 auto;
+  }
+
+  /**** Flexible Cards ****
+  *************************/
+
+  .flex-cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .card {
+    max-width: 33%;
+    h3 {
+      padding: 0 10px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  .card-grow {
+    min-width: 66%;
   }
 
 }
