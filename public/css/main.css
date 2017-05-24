@@ -46,6 +46,7 @@ header {
 *************************/
 .wrapper {
   width: 90%;
+  max-width: 1024px;
   min-height: 100vh;
   margin: 0 auto; }
 
@@ -155,6 +156,8 @@ hr {
     text-overflow: ellipsis; }
 
 @media screen and (min-width: 600px) {
+  .module:nth-child(even) {
+    margin: 150px 0 0 0; }
   .module-title {
     flex-direction: row;
     align-items: center; }
@@ -207,24 +210,35 @@ hr {
     overflow: auto;
     margin: 0 0 0 auto; }
   .code-btn {
+    margin: 40px auto;
+    width: 40%; }
+  .acc-btn {
     position: absolute;
-    bottom: 25px;
+    bottom: -75px;
     left: 0;
     right: 0;
-    margin: auto;
-    width: 40%; }
+    margin: auto; }
   /**** Flexible Cards ****
   *************************/
   .flex-cards {
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between; }
+    justify-content: space-between;
+    width: 95%;
+    margin: 0 auto; }
   .card {
-    max-width: 33%; }
+    flex: 1  32%;
+    max-width: 32%;
+    margin: 1% 0; }
     .card h3 {
       padding: 0 10px;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis; }
   .card-grow {
-    min-width: 66%; } }
+    flex: 2 0 66%;
+    max-width: 66%; } }
+
+@media screen and (min-width: 850px) {
+  .module hr {
+    width: 80%; } }
