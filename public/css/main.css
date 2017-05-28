@@ -155,6 +155,66 @@ hr {
     overflow: hidden;
     text-overflow: ellipsis; }
 
+/**** Navigation Bar ****
+*************************/
+nav {
+  display: flex;
+  flex-direction: column;
+  background: #D1D2D3; }
+  nav h3 {
+    color: #666;
+    font-weight: 300;
+    text-transform: uppercase; }
+
+.mobile-menu {
+  display: none;
+  background-color: #f2f2f2;
+  list-style-type: none;
+  margin: 0;
+  padding: 10px 0 0 0; }
+  .mobile-menu li {
+    cursor: pointer;
+    padding: 15px 15px 20px; }
+
+.open {
+  display: block; }
+
+.mobile-nav {
+  padding: 0 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #D1D2D3; }
+
+.menu-btn {
+  display: block;
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  border: 1px solid #f2f2f2;
+  cursor: pointer; }
+
+.search-wrap {
+  position: relative;
+  display: flex;
+  align-items: center; }
+
+.search-icon {
+  position: absolute;
+  left: 20px;
+  width: 15px;
+  height: 15px; }
+
+.nav-search {
+  display: block;
+  width: 100%;
+  padding: 10px 10px 10px 25px;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #D1D2D3;
+  font-size: .85em;
+  font-weight: 300;
+  border: 1px solid rgba(0, 0, 0, 0.25); }
+
 @media screen and (min-width: 600px) {
   .module:nth-child(even) {
     margin: 150px 0 0 0; }
@@ -227,7 +287,7 @@ hr {
     width: 95%;
     margin: 0 auto; }
   .card {
-    flex: 1  32%;
+    flex: 1 0 32%;
     max-width: 32%;
     margin: 1% 0; }
     .card h3 {
@@ -237,7 +297,32 @@ hr {
       text-overflow: ellipsis; }
   .card-grow {
     flex: 2 0 66%;
-    max-width: 66%; } }
+    max-width: 66%; }
+  /**** Navigation Bar ****
+*************************/
+  nav {
+    width: 95%;
+    margin: 0 auto;
+    flex-direction: row;
+    justify-content: space-between; }
+    nav h3 {
+      display: none; }
+  .menu-btn {
+    height: 40px;
+    width: 40px;
+    cursor: default; }
+  .mobile-menu {
+    padding-top: 0;
+    display: flex;
+    background-color: #D1D2D3;
+    align-items: center; }
+    .mobile-menu li {
+      padding: 20px;
+      font-size: .8em; }
+  .nav-search {
+    background-color: #f2f2f2; }
+  .search-icon {
+    left: 27px; } }
 
 @media screen and (min-width: 850px) {
   .module hr {

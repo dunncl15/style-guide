@@ -1,4 +1,6 @@
 const allTabs = document.querySelectorAll('.tab-title');
+const menuBtn = document.querySelector('.menu-btn');
+const mobileMenu = document.querySelector('.mobile-menu');
 
 const showFirstTab = () => {
   let tab = allTabs[0];
@@ -15,10 +17,19 @@ const checkTabs = () => {
   })
 }
 
+const openMenu = () => {
+  const width = document.documentElement.clientWidth;
+  if (width < 600) {
+    mobileMenu.classList.toggle('open');
+  }
+}
+
+menuBtn.addEventListener('click', openMenu);
+
 showFirstTab();
 
 allTabs.forEach(tab => tab.addEventListener('click', () => {
   checkTabs();
   tab.classList.toggle('selected');
   tab.nextElementSibling.classList.toggle('expanded');
-}))
+}));
