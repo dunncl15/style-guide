@@ -1,5 +1,5 @@
 const allTabs = document.querySelectorAll('.tab-title');
-const menuBtn = document.querySelector('.menu-btn');
+const menuBtn = document.querySelector('.menu');
 const mobileMenu = document.querySelector('.mobile-menu');
 
 const showFirstTab = () => {
